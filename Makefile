@@ -10,7 +10,12 @@ SRCS = main.cc \
 		miner.cc \
 		scout.cc \
 		rescuer.cc \
-		map_graphics.cc
+		map_graphics.cc \
+		input.cc \
+		button.cc \
+		control_panel.cc \
+		map_general_panel.cc \
+		secondary_panel.cc
 
 OBJS = $(subst .cc,.o,$(SRCS))
 INC = .
