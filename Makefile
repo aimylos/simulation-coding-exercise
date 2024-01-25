@@ -3,7 +3,12 @@ CFLAGS =
 EXEC = simulation
 
 SRCS = main.cc \
-		block.cc
+		block.cc \
+		map.cc \
+		vehicle.cc \
+		miner.cc \
+		scout.cc \
+		rescuer.cc
 
 OBJS = $(subst .cc,.o,$(SRCS))
 INC = .
