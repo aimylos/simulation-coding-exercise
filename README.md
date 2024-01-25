@@ -12,4 +12,4 @@ In linux, install dependencies and use `make` to build. The executable is named 
 
 
 # Project Diagram
-![simulation diagram](simulation_diagram)
+![simulation diagram](simulation_diagram.png)
