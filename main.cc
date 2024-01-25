@@ -14,8 +14,8 @@
 #include "input.h"
 
 
-#include "SDL/SDL.h"
-#include "SDL/SDL_ttf.h"
+#include <SDL.h>
+#include <SDL_ttf.h>
 
 #include <cstdlib>
 using std::rand;
@@ -73,7 +73,7 @@ control_panel* control_panel_;
 SDL_Rect control_panel_rect;
 SDL_Surface* control_panel_surface;
 //round counter
-int round;
+int round_c;
 //simulation speed in milliseconds
 int sim_speed;
 //vehicle list
@@ -134,7 +134,7 @@ int main( int argc, char* args[] ) {
           if(!paused){
           //RUN SIMULATION ROUND
           //increase round, round shows current round
-          round++;
+          round_c++;
           //move vehicles
           vehicle_list_move();
           //update map and panels
@@ -238,13 +238,13 @@ bool init_simulation(int map_size, int num_miners, int num_scouts, int num_rescu
      srand(time(NULL)); //must seed random generator
      
      //initialize round
-     round = 1;
+     round_c = 1;
      
      //set simulation speed
      sim_speed = 300;
      
      //create a map
-     A = new map_graphics(map_size,-1,-1, &round); //size = 20, random coordinates for base
+     A = new map_graphics(map_size,-1,-1, &round_c); //size = 20, random coordinates for base
      if(A == NULL) return false;
      //get map surface
      map_surface = A->get_map_surface();
@@ -273,14 +273,14 @@ bool init_simulation(int map_size, int num_miners, int num_scouts, int num_rescu
              enter_y = (rand() % A->get_size()) + 1; 
              temp_x = enter_x;
              temp_y = enter_y;
-             if(!(*itr)->enter_map(&round,temp_x,temp_y)){
+             if(!(*itr)->enter_map(&round_c,temp_x,temp_y)){
                    int k;
                    for(k=0;k<8;k++) { //try all 9 positions
                       temp_x = enter_x + dir_x[k];
                       temp_y = enter_y + dir_y[k];
-                      if((*itr)->enter_map(&round,temp_x,temp_y)) break;
+                      if((*itr)->enter_map(&round_c,temp_x,temp_y)) break;
                    }
-                   if(k==8) (*itr)->enter_map(&round,-1,-1); //try all positions
+                   if(k==8) (*itr)->enter_map(&round_c,-1,-1); //try all positions
              }//if it doesn't enter, vehicle's function will defensively keep the simulation running 
      }
      //map offset
