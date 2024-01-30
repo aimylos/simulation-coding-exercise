@@ -1,0 +1,14 @@
+simulation
+src/secondary_panel.o
+src/scout.o
+src/rescuer.o
+src/vehicle.o
+src/miner.o
+src/map.o
+src/map_graphics.o
+src/map_general_panel.o
+src/main.o
+src/input.o
+src/control_panel.o
+src/button.o
+src/block.o

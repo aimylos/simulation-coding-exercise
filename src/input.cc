@@ -22,7 +22,7 @@ input::input( int x, int y, int w, int h ) : button(x,y,w,h){
         clear_input();
                 
         //load font, font size is based on 72DPI <=> 1pixel == 1point
-        font = TTF_OpenFont( "arial.ttf", h-5 ); //if didn't load then no fonts will appear
+        font = TTF_OpenFont( "fonts/arial.ttf", h-5 ); //if didn't load then no fonts will appear
             
         //set font color
         SDL_Color textColor = { 0, 0, 0 };

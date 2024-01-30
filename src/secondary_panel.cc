@@ -27,8 +27,8 @@ secondary_panel::secondary_panel(map* m){
          top_offset = 0;
          
          //load font and color
-         font = TTF_OpenFont( "arial.ttf", 20 ); //if didn't load then no fonts will appear
-         header_font = TTF_OpenFont( "arial.ttf", 30 );
+         font = TTF_OpenFont( "fonts/arial.ttf", 20 ); //if didn't load then no fonts will appear
+         header_font = TTF_OpenFont( "fonts/arial.ttf", 30 );
          SDL_Color textColor = { 0, 0, 0 };
          textColorBlack = textColor;
 

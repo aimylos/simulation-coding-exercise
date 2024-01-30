@@ -49,8 +49,8 @@ control_panel::control_panel(SDL_Rect offset, secondary_panel* sp, map* m, list<
              map_y = 0;
              
              //set font and color
-             font = TTF_OpenFont( "arial.ttf", 28 );
-             header_font = TTF_OpenFont( "arial.ttf", 35);
+             font = TTF_OpenFont( "fonts/arial.ttf", 28 );
+             header_font = TTF_OpenFont( "fonts/arial.ttf", 35);
              SDL_Color textColor = { 0, 0, 0 };
              textColorBlack = textColor;
              

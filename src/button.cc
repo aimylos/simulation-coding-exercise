@@ -23,7 +23,7 @@ button::button( int x, int y, int w, int h, std::string name ){
         box.y = y;
                 
         //load font, font size is based on 72DPI <=> 1pixel == 1point
-        TTF_Font* font = TTF_OpenFont( "arial.ttf", w/name.length()+5 ); //if didn't load then no fonts will appear
+        TTF_Font* font = TTF_OpenFont( "fonts/arial.ttf", w/name.length()+5 ); //if didn't load then no fonts will appear
             
         //set font color
         SDL_Color textColor = { 0, 0, 0 };

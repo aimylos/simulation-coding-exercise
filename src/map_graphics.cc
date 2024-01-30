@@ -34,7 +34,7 @@ map_graphics::map_graphics(int s, int x, int y, int* round) : map(s,x,y,round) {
             else if(block_pixel_size <= 40) font_size = 20;
             else font_size = 28;
             //load font
-            font = TTF_OpenFont( "arial.ttf", font_size ); //if didn't load then no fonts will appear
+            font = TTF_OpenFont( "fonts/arial.ttf", font_size ); //if didn't load then no fonts will appear
             
             //set font colors
             SDL_Color textColor = { 255, 255, 255 };
