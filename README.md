@@ -9,7 +9,8 @@ SDL_ttf-2.0.11
 
 # Build
 In linux, install dependencies and use `make` to build. The executable is named `simulation`.
-
+or
+Create a docker image using the Dockerfile available.
 
 # Simulation Screenshot
 ![simulation screenshot](simulation_screenshot.png)
