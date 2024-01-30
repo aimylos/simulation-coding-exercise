@@ -1,6 +1,5 @@
 CC = g++
 EXEC = simulation
-
 CFLAGS = $(shell sdl-config --cflags) $(shell sdl-config --libs) -lSDL_ttf
 
 SRCS = src/main.cc \
@@ -21,12 +20,12 @@ OBJS = $(subst .cc,.o,$(SRCS))
 INC = include/
 
 .cc.o:
-		${CC} ${CFLAGS} -I ${INC} -c $< -o $@ 
+	${CC}  -c $< -o $@ -I ${INC} ${CFLAGS}
 
 all: ${EXEC}
 
 ${EXEC}: ${OBJS}
-		${CC} ${CFLAGS} -o $@ ${OBJS}
+	${CC} -o $@ ${OBJS} -I ${INC} ${CFLAGS}
 
 clean:
-		rm -f ${EXEC} ${OBJS}
+	rm -f ${EXEC} ${OBJS}
